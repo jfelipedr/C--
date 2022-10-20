@@ -12,29 +12,32 @@ que numero es mayor o si ambos son iguales, la computadora no sabe distinguir si
 pero si sabe que 97 (valor numerico de "a"), es mas chico que 98 (valor numerico de b),*/
 #include <iostream>
 #include <string.h>//libreria para cadena de caracteres
-using namespace std;
-int main(){
-    char word1[]="Hello";
-    char word2[]="Hello";
+
+int main()
+{
+    char word1[] = "Hello";
+    char word2[] = "Hello";
 
 /*El resultado de strcmp() es 0 si las cadenas son iguales, y es igual a 1 si son distintas*/
-    if ( strcmp(word1,word2) ==0 ) {
-        cout<<"\nSon la misma cadena\n";
-    }
-    else cout<<"\nSon distintas\n";
+    if ( strcmp(word1,word2) ==0 )
+        std::cout << "\nSon la misma cadena\n";
+    
+    else 
+        std::cout << "\nSon distintas\n";
 
     /*Tambien se puede usar strcmp() para comparar cual cadena es mayor alfabeticamente
     o sea su orden alfabetico*/
-    char word3[]="ardilla";
-    char word4[]="zebra";
+    char word3[] = "ardilla";
+    char word4[] = "zebra";
 
 /*Se esta comparando si la word3 esta despues de word4 alfabeticamente*/
 /*strcmp(word3,word4) >0 quiere saber si la primera es MAYOR a la segunda*/
 /*strcmp(word3,word4) <0 quiere saber si la primera es MENOR a la segunda*/
-    if ( strcmp(word3,word4) > 0 ) {
-        cout<<endl<<word3<<" es mayor alfabeticamente que "<<word4<<endl;
-    }
-    else cout<<endl<<word4<<" es mayor alfabeticamente que "<<word3<<endl;
+    if ( strcmp(word3,word4) > 0 )
+        std::cout << '\n' << word3 << " es mayor alfabeticamente que " << word4 << '\n';
+    
+    else 
+        std::cout << '\n' << word4 << " es mayor alfabeticamente que " << word3 << '\n';
 
     return 0;
 }

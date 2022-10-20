@@ -1,9 +1,10 @@
 #include <iostream>
 #include <stdlib.h>//es necesaria para generar el numero aleatorio, si no da error en srand()
 #include <time.h> /*Esta libreria permite usar la funcion time()*/
-using namespace std;
-int main(){
-    int num, entrada, intentos=0;
+
+int main()
+{
+    int num, entrada, intentos = 0;
     char continuar;
 
     srand(time(NULL));/* inicializa los numeros aleatorios para que cada vez
@@ -11,51 +12,52 @@ int main(){
 
 /*Ajustar el rango del num aleatorio:  variable = limite_inferior + rand() % (limite_superior +1 - limite_inferior);
 por ejemplo Numero aleatorios entre 250 y 420: num=250+rand()%(421-250);*/
-    num=1+rand()%100;
+    num = 1 + rand()%100;
 
-    cout<<"\n----------------------Este es un juego de adivinar el numero entre 1 y 100----------------------\n";
-//    cout<<num; //se inmprime el numero aleatorio para verificar el programa
+    std::cout << "\n----------------------Este es un juego de adivinar el numero entre 1 y 100----------------------\n";
+//    std::cout<<num; //se inmprime el numero aleatorio para verificar el programa, esto se puede evitar si se usa in debugger
     do {
-        cout<<"\nEscriba el numero: "; cin>>entrada;
-        if (num<entrada) {
-            cout<<"\nEL NUMERO ES MENOR\n";
-        }
+        std::cout << "\nEscriba el numero: "; std::cin >> entrada;
+        if (num<entrada)
+            std::cout << "\nEL NUMERO ES MENOR\n";
+        
         /*no se puede usar un else porque en caso de que num==entrada imprime la linea "numero mayor" y luego cierra el bucle*/
-        if (num>entrada) {
-            cout<<"\nEL NUMERO ES MAYOR\n";
-        }
+        if (num>entrada)
+            std::cout << "\nEL NUMERO ES MAYOR\n";
+        
         intentos++;
     } while(num!=entrada);
 
-    cout<<"\n----------------------ADIVINO EL NUMERO----------------------\n";
-    cout<<"Numero de intentos: "<<intentos<<endl;
+    std::cout << "\n----------------------ADIVINO EL NUMERO----------------------\n";
+    std::cout << "Numero de intentos: " << intentos << '\n';
 
     do {
-        cout<<"\nDesea continuar? y=Si n=NO "; cin>>continuar;
+        std::cout << "\nDesea continuar? y=Si n=NO "; std::cin >> continuar;
 
-        if (continuar=='n'||continuar=='N') {
+        if (continuar=='n'||continuar=='N')
             break;
-        }
-        while (continuar=='y'||continuar=='Y') {
+        
+        while (continuar=='y'||continuar=='Y') 
+        {
             srand(time(NULL));
-            num=1+rand()%100;
-            intentos=0;
+            num = 1 + rand()%100;
+            intentos = 0;
 //            cout<<num; //se inmprime el numero aleatorio para verificar el programa
             do {
-                cout<<"\nEscriba el numero: "; cin>>entrada;
-                if (num<entrada) {
-                    cout<<"\nEL NUMERO ES MENOR\n";
-                }
-                if (num>entrada) {
-                    cout<<"\nEL NUMERO ES MAYOR\n";
-                }
+                std::cout << "\nEscriba el numero: "; std::cin >> entrada;
+                if (num<entrada)
+                    std::cout << "\nEL NUMERO ES MENOR\n";
+                
+                if (num>entrada)
+                    std::cout << "\nEL NUMERO ES MAYOR\n";
+                
                 intentos++;
             } while(num!=entrada);
-            cout<<"\n----------------------ADIVINO EL NUMERO----------------------\n";
-            cout<<"Numero de intentos: "<<intentos<<endl;
-            cout<<"\nDesea continuar? y=Si n=NO "; cin>>continuar;
+            std::cout << "\n----------------------ADIVINO EL NUMERO----------------------\n";
+            std::cout << "Numero de intentos: " << intentos << '\n';
+            std::cout << "\nDesea continuar? y=Si n=NO "; std::cin >> continuar;
         }
-    } while(continuar!='n' && continuar!='y' && continuar!='N' && continuar!='Y');
+    } while (continuar != 'n' && continuar != 'y' && continuar != 'N' && continuar != 'Y');
 
     return 0;
 }

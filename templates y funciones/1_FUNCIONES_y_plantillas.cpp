@@ -28,24 +28,23 @@ definicion de funcion
 */
 /*Ejemplo1 crear funciones*/
 #include <iostream>
-using namespace std;
 
 //prototipo de funcion
-int encontar_max(int x, int y);
 
-int main(){
+int main()
+{
 	int n1, n2, mayor;
 
-	cout<<"Digite 2 numeros: ";
-	cin>>n1>>n2;
+	std::cout << "Digite 2 numeros: ";
+	std::cin >> n1 >> n2;
 
-	mayor=encontar_max(n1,n2);//la salida de la funcion sera el numero mayor
+	mayor = encontar_max(n1, n2);//la salida de la funcion sera el numero mayor
 
-	cout<<mayor<<" es el numero mayor"<<endl;
+	std::cout << mayor << " es el numero mayor" << '\n';
 
 	//tambien se puede imprimir directamene el valor que retorna la funcion
 	//para ahorrase crear la variable mayor
-	cout<<"otra forma de imprimir: "<<encontar_max(n1, n2)<<endl;
+	std::cout << "otra forma de imprimir: " << encontar_max(n1, n2) << '\n';
 
 	return 0;
 }
@@ -54,12 +53,11 @@ int main(){
 int encontar_max(int x, int y){
 	int num_max;
 
-	if (x>y) {
-		num_max=x;
-	}
-	else {
-		num_max=y;
-	}
+	if (x > y)
+		num_max = x;
+	
+	else
+		num_max = y;
 
 	return num_max;
 }

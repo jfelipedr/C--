@@ -25,22 +25,22 @@ int	main ()
 	s = true;
 
 	// el \n se usa para salto de linea
-	printf ("valor de x: %i.\n",x); //el %i es porque es variable de tipo int
+	printf ("valor de x: %i.\n", x); //el %i es porque es variable de tipo int
 
-	printf ("valor de y: %f.\n",y); // %f porque es variable tipo float
+	printf ("valor de y: %f.\n", y); // %f porque es variable tipo float
 
-	printf ("valor de z: %f.\n",z); //aunque la variable es double para guardar en 64bits sigue siendo tipo float
+	printf ("valor de z: %f.\n", z); //aunque la variable es double para guardar en 64bits sigue siendo tipo float
 
-	printf ("valor de z: %c.\n",w); // %c por ser tipo char
+	printf ("valor de z: %c.\n", w); // %c por ser tipo char
 
-	std::cout << "\nTamaño de variables \"int\" en BYTES: " <<sizeof(int);
-	std::cout << "\nvalor minimo de int: " <<INT_MIN<< '\n';
-	std::cout << "\nvalor maximo de int: " <<INT_MAX<< '\n';
+	std::cout << "\nTamaño de variables \"int\" en BYTES: " << sizeof(int);
+	std::cout << "\nvalor minimo de int: " << INT_MIN << '\n';
+	std::cout << "\nvalor maximo de int: " << INT_MAX << '\n';
 
-	std::cout << "\nsize of bool: " <<sizeof(bool)<<'\n';
-	std::cout << "\nsize of char: " <<sizeof(char)<<'\n';
-	std::cout << "\nsize of float: " <<sizeof(float)<<'\n';
-	std::cout << "\nsize of double: " <<sizeof(double)<<'\n';
+	std::cout << "\nsize of bool: " << sizeof(bool) <<'\n';
+	std::cout << "\nsize of char: " << sizeof(char) <<'\n';
+	std::cout << "\nsize of float: " << sizeof(float) <<'\n';
+	std::cout << "\nsize of double: " << sizeof(double) <<'\n';
 
 	return 0;
 }

@@ -4,31 +4,32 @@ La funcion tiene que considerar el valor entero transmitido como una cantidad en
 y convertir el valor en el numero menor de billetes equivalentes. */
 #include<iostream>
 #include<conio.h>
-using namespace std;
 
-void cambio(int,int&,int&,int&,int&,int&,int&);
+void cambio(int, int&, int&, int&, int&, int&, int&);
 
-int main(){
-	int valor,cien=0,cincuenta=0,veinte=0,diez=0,cinco=0,uno=0;
+int main()
+{
+	int valor, cien = 0, cincuenta = 0, veinte = 0, diez = 0, cinco = 0, uno = 0;
 
-	cout<<"Digite un valor: ";
-	cin>>valor;
+	std::cout << "Digite un valor: ";
+	std::cin >> valor;
 	//Llamos a la funcion
-	cambio(valor,cien,cincuenta,veinte,diez,cinco,uno);
+	cambio(valor, cien, cincuenta, veinte, diez, cinco, uno);
 
-	cout<<"Cantidad de billetes a entregar como cambio:"<<endl;
-	cout<<"Cien: "<<cien<<endl;
-	cout<<"Cincuenta: "<<cincuenta<<endl;
-	cout<<"Veinte: "<<veinte<<endl;
-	cout<<"Diez: "<<diez<<endl;
-	cout<<"Cinco: "<<cinco<<endl;
-	cout<<"Uno: "<<uno<<endl;
+	std::cout << "Cantidad de billetes a entregar como cambio:" << '\n';
+	std::cout << "Cien: " << cien <<'\n';
+	std::cout << "Cincuenta: " << cincuenta << '\n';
+	std::cout << "Veinte: " << veinte << '\n';
+	std::cout << "Diez: " << diez << '\n';
+	std::cout << "Cinco: " << cinco << '\n';
+	std::cout << "Uno: " << uno << '\n';
 
 	getch();
 	return 0;
 }
 
-void cambio(int valor,int& cien,int& cincuenta,int& veinte,int& diez,int& cinco,int& uno){
+void cambio(int valor, int& cien, int& cincuenta, int& veinte, int& diez, int& cinco, int& uno)
+{
 	cien = valor/100;
 	valor %= 100;
 	cincuenta = valor/50;

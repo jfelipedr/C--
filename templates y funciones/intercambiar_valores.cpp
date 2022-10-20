@@ -2,26 +2,27 @@
 referencia.*/
 #include<iostream>
 #include<conio.h>
-using namespace std;
 
 void intercambio(int&, int&);
 
-int main(){
+int main()
+{
 	int num1=10,num2=15;
 
-	cout<<"El valor almacenado en num1 es: "<<num1<<endl;
-	cout<<"El valor almacenado en num2 es: "<<num2<<endl;
+	std::cout << "El valor almacenado en num1 es: " << num1 << '\n';
+	std::cout << "El valor almacenado en num2 es: " << num2 << '\n';
 
 	intercambio(num1,num2);
 
-	cout<<"Ahora el nuevo valor de num1 es: "<<num1<<endl;
-	cout<<"Ahora el nuevo valor de num2 es: "<<num2<<endl;
+	std::cout << "Ahora el nuevo valor de num1 es: " << num1 << '\n';
+	std::cout << "Ahora el nuevo valor de num2 es: " << num2 << '\n';
 
 	getch();
 	return 0;
 }
 
-void intercambio(int& num1, int& num2){
+void intercambio(int& num1, int& num2)
+{
 	int aux;
 	//Intercambiamos ambos valores de las variables num1 y num2
 	aux = num1;

@@ -1,29 +1,31 @@
 /*Ejercicio 9:La funcion es convertir el numero de segundos transmitido en un numero
 equivalente de horas, minutos y segundos.*/
 
-#include<iostream>
-#include<conio.h>
-using namespace std;
+#include <iostream>
+#include <conio.h>
 
-void tiempo(int,int&,int&,int&);
 
-int main(){
-	int totalSeg,horas,min,seg;
+void tiempo(int, int&, int&, int&);
 
-	cout<<"Digita la cantidad de segundos: ";
-	cin>>totalSeg;
+int main()
+{
+	int totalSeg, horas, min, seg;
 
-	tiempo(totalSeg,horas,min,seg);
+	std::cout << "Digita la cantidad de segundos: ";
+	std::cin >> totalSeg;
 
-	cout<<"\nHoras: "<<horas<<endl;
-	cout<<"Minutos: "<<min<<endl;
-	cout<<"Segundos: "<<seg<<endl;
+	tiempo(totalSeg, horas, min, seg);
+
+	std::cout << "\nHoras: " << horas << '\n';
+	std::cout << "Minutos: " << min << '\n';
+	std::cout << "Segundos: " << seg << '\n';
 
 	getch();
 	return 0;
 }
 
-void tiempo(int totalSeg,int& horas,int& min,int& seg){
+void tiempo(int totalSeg, int& horas, int& min, int& seg)
+{
 	horas = totalSeg/3600;
 	totalSeg %= 3600;
 	min = totalSeg/60;
