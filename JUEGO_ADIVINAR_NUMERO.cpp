@@ -26,7 +26,7 @@ por ejemplo Numero aleatorios entre 250 y 420: num=250+rand()%(421-250);*/
             std::cout << "\nEL NUMERO ES MAYOR\n";
         
         intentos++;
-    } while(num!=entrada);
+    } while(num != entrada);
 
     std::cout << "\n----------------------ADIVINO EL NUMERO----------------------\n";
     std::cout << "Numero de intentos: " << intentos << '\n';
@@ -34,10 +34,10 @@ por ejemplo Numero aleatorios entre 250 y 420: num=250+rand()%(421-250);*/
     do {
         std::cout << "\nDesea continuar? y=Si n=NO "; std::cin >> continuar;
 
-        if (continuar=='n'||continuar=='N')
+        if (continuar =='n'||continuar =='N')
             break;
         
-        while (continuar=='y'||continuar=='Y') 
+        while (continuar =='y'||continuar =='Y') 
         {
             srand(time(NULL));
             num = 1 + rand()%100;
