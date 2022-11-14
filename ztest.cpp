@@ -1,9 +1,15 @@
 #include <iostream>
-#include <chrono>
-#include <thread>
+#include <stdlib.h>
+#include<ctime>
+
+void delay(int secs) {
+  for(int i = (time(NULL) + secs); time(NULL) != i; time(NULL));
+}
 
 int main()
 {
+
+    int sec = 2;
     std::cout <<",         ," <<"\n";
     std::cout <<"|\       /|"<<"\n";
     std::cout <<"| \  V  / |"<<"\n";
@@ -14,9 +20,9 @@ int main()
     std::cout <<" \ |  s| / "<<"\n";
     std::cout <<"  \|===|/  "<<"\n";
     std::cout <<"   '---'   "<<"\n";
-
-    std::this_thread::sleep_for(std::chrono::milliseconds(2000) );
+    delay(sec);
     system("cls");
+
     std::cout <<"  ,    ," <<"\n";
     std::cout <<"  /// /|"<<"\n";
     std::cout <<" ////  |"<<"\n";
@@ -27,5 +33,5 @@ int main()
     std::cout <<"|  s| /"<<"\n";
     std::cout <<"|===|/"<<"\n";
     std::cout <<"'---'"<<"\n";
-    std::this_thread::sleep_for(std::chrono::milliseconds(2000) );
+    delay(sec);
 }
