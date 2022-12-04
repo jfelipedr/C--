@@ -11,14 +11,14 @@ int main()
 
     int sec = 2;
     std::cout <<",         ," <<"\n";
-    std::cout <<"|\       /|"<<"\n";
-    std::cout <<"| \  V  / |"<<"\n";
+    std::cout <<"|L       /|"<<"\n";
+    std::cout <<"| L  V  / |"<<"\n";
     std::cout <<"|  |~~~|  |"<<"\n";
     std::cout <<"|  |===|  |"<<"\n";
     std::cout <<"|  |j  |  |"<<"\n";
     std::cout <<"|  | g |  |"<<"\n";
-    std::cout <<" \ |  s| / "<<"\n";
-    std::cout <<"  \|===|/  "<<"\n";
+    std::cout <<" L |  s| / "<<"\n";
+    std::cout <<"  L|===|/  "<<"\n";
     std::cout <<"   '---'   "<<"\n";
     delay(sec);
     system("cls");
